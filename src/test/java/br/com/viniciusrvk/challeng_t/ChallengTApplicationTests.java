@@ -1,4 +1,4 @@
-package br.com.viniciusrvk.challeng_T;
+package br.com.viniciusrvk.challeng_t;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
