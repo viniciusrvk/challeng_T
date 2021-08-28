@@ -7,7 +7,7 @@ public class RegraNomeSemEspacosExtras implements Rule{
 
 	@Override
 	public Boolean isValid(String fullName) {
-		return !fullName.isEmpty();
+		return !fullName.matches("(^\\s.*)|(.*\\s$)");
 	}
 
 }

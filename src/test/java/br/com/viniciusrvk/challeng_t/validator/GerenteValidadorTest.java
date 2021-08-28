@@ -12,13 +12,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import br.com.viniciusrvk.challeng_t.domain.Robo;
+import br.com.viniciusrvk.challeng_t.domain.Gerente;
 
 @RunWith(SpringRunner.class)
-public class RoboValidadorTest {
+public class GerenteValidadorTest {
 
 	@InjectMocks
-	private RoboValidador roboValidador;
+	private GerenteValidador gerenteValidador;
 
 	@Mock
 	private List<Rule> rules;
@@ -27,9 +27,9 @@ public class RoboValidadorTest {
 
 	@Test
 	public void deveRetornarNomeValido() {
-		final String nome = "José da Silva";
-		final Robo robo = new Robo(nome);
+		final String nome = "Jose da Silva";
+		final Gerente gerente = new Gerente(nome);
 		when(rule.isValid(nome)).thenReturn(true);
-		assertThat(roboValidador.validar(robo).getResultado()).isTrue();
+		assertThat(gerenteValidador.validar(gerente).getResultado()).isTrue();
 	}
 }
